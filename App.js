@@ -32,7 +32,8 @@ function App() {
       return
     }
     setValorCalculado(0);
-    let resultado = valorInicial * taxaJuros * quantidadeMeses;
+    let juros = valorInicial * (taxaJuros / 100) * quantidadeMeses;
+    let resultado = valorInicial + juros;
     setValorCalculado(resultado);
   }
 
